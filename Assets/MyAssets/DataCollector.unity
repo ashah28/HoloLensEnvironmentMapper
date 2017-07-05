@@ -117,6 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 74965704}
   - component: {fileID: 74965705}
+  - component: {fileID: 74965706}
   m_Layer: 0
   m_Name: DataCollectionManager
   m_TagString: Untagged
@@ -149,6 +150,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1094588831}
+  videoController: {fileID: 74965706}
+--- !u!114 &74965706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 74965703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271cfd67c8933af4fa34c47546ebcb9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &84170217
 Prefab:
   m_ObjectHideFlags: 0

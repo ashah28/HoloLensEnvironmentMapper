@@ -12,6 +12,9 @@ public class DataCollectionManager : MonoBehaviour {
     [SerializeField]
     StreamWriter sr;
 
+    [SerializeField]
+    VideoCaptureController videoController;
+
     bool recording = false;
     string fileName = "data";
     string filePath;
@@ -56,11 +59,13 @@ public class DataCollectionManager : MonoBehaviour {
         if (recording)
         {
             InvokeRepeating("WritePositionToScreen", 0, 0.2f);
+            videoController.StartRecording();
             recStartTime = Time.time;
         }
         //when the recording stops
         else
         {
+            videoController.StopRecording();
             CancelInvoke("WritePositionToScreen");
             if (sr != null)
                 sr.Dispose();
