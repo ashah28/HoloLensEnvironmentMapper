@@ -82,7 +82,7 @@ public class DataCollectionManager : MonoBehaviour {
 
             //editor
             if (Application.isEditor)
-                filePath = Application.persistentDataPath + "/Data/" + currentFileName;
+                filePath = "Data/" + currentFileName;
             //deployed app
             else
                 filePath = Application.persistentDataPath + "/" + currentFileName;
