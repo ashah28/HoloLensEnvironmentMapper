@@ -36,6 +36,6 @@ public class DebugManager : Singleton<DebugManager> {
 
     string GetCurrentTimestamp()
     {
-        return string.Format("00.000", Time.time.ToString());
+        return Time.time.ToString("000.000");
     }
 }

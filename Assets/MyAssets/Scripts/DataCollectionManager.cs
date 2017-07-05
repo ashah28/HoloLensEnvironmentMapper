@@ -7,18 +7,32 @@ public class DataCollectionManager : MonoBehaviour {
     [SerializeField]
     Transform target;
 
+    bool recording = false;
+
 	// Use this for initialization
 	void Start () {
         if (!target)
         {
             print("No target transform found");
         }
-        DebugManager.Instance.PrintToRunningLog("Hello");
-        DebugManager.Instance.PrintToInfoLog("World");
+
+        //DebugManager.Instance.PrintToRunningLog("Hello");
+        //DebugManager.Instance.PrintToInfoLog("World");
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public void OnToggleClick()
+    {
+        DebugManager.Instance.PrintToInfoLog("Clicked");
+
+        if(recording)
+        {
+
+        }
+        else
+        {
+
+        }
+
+        recording = !recording;
+    }
 }
