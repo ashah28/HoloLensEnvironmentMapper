@@ -167,13 +167,8 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 601468443}
+    m_TransformParent: {fileID: 1094588831}
     m_Modifications:
-    - target: {fileID: 114377831441866528, guid: fca9412151524604ba3814a2b3aa6218,
-        type: 2}
-      propertyPath: OnSelectEvents.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4315010379072772, guid: fca9412151524604ba3814a2b3aa6218, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -188,15 +183,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4315010379072772, guid: fca9412151524604ba3814a2b3aa6218, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4315010379072772, guid: fca9412151524604ba3814a2b3aa6218, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4315010379072772, guid: fca9412151524604ba3814a2b3aa6218, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4315010379072772, guid: fca9412151524604ba3814a2b3aa6218, type: 2}
       propertyPath: m_LocalRotation.w
@@ -211,21 +206,6 @@ Prefab:
       propertyPath: OnSelectEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 74965705}
-    - target: {fileID: 114377831441866528, guid: fca9412151524604ba3814a2b3aa6218,
-        type: 2}
-      propertyPath: OnSelectEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnToggleClick
-      objectReference: {fileID: 0}
-    - target: {fileID: 114377831441866528, guid: fca9412151524604ba3814a2b3aa6218,
-        type: 2}
-      propertyPath: OnSelectEvents.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114377831441866528, guid: fca9412151524604ba3814a2b3aa6218,
-        type: 2}
-      propertyPath: OnSelectEvents.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fca9412151524604ba3814a2b3aa6218, type: 2}
   m_IsPrefabParent: 0
@@ -336,26 +316,6 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 152022845}
-    - target: {fileID: 224663283456544064, guid: dcea98835da909340a1d6d8a4c68d29e,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: -150
-      objectReference: {fileID: 0}
-    - target: {fileID: 224098875729598454, guid: dcea98835da909340a1d6d8a4c68d29e,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -75
-      objectReference: {fileID: 0}
-    - target: {fileID: 224098875729598454, guid: dcea98835da909340a1d6d8a4c68d29e,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: -150
-      objectReference: {fileID: 0}
-    - target: {fileID: 224663283456544064, guid: dcea98835da909340a1d6d8a4c68d29e,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 150
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcea98835da909340a1d6d8a4c68d29e, type: 2}
   m_IsPrefabParent: 0
@@ -467,7 +427,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2141271307}
-  - {fileID: 1116344403}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -523,11 +482,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010560871102, guid: d379ed0a5618c9f479f58bd83a2d0ad3,
     type: 2}
   m_PrefabInternal: {fileID: 1270497015}
---- !u!4 &1116344403 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4315010379072772, guid: fca9412151524604ba3814a2b3aa6218,
-    type: 2}
-  m_PrefabInternal: {fileID: 84170217}
 --- !u!1 &1191741112
 GameObject:
   m_ObjectHideFlags: 0
