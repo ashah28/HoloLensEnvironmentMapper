@@ -67,18 +67,18 @@ public class VideoCaptureController : MonoBehaviour
 
     public void StartRecording()
     {
-        DebugManager.Instance.PrintToInfoLog("Start Video Clicked!\n");
         string timeStamp = Time.time.ToString().Replace(".", "").Replace(":", "");
         string filename = string.Format("TestVideo_{0}.mp4", timeStamp);
         string filepath = System.IO.Path.Combine(Application.persistentDataPath, filename);
         filepath = filepath.Replace("/", @"\");
-        m_VideoCapture.StartRecordingAsync(filepath, OnStartedRecordingVideo);
+        if(m_VideoCapture != null)
+            m_VideoCapture.StartRecordingAsync(filepath, OnStartedRecordingVideo);
     }
 
     public void StopRecording()
     {
-        DebugManager.Instance.PrintToInfoLog("Stop Video Clicked");
-        m_VideoCapture.StopRecordingAsync(OnStoppedRecordingVideo);
+        if (m_VideoCapture != null)
+            m_VideoCapture.StopRecordingAsync(OnStoppedRecordingVideo);
     }
 
     void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)

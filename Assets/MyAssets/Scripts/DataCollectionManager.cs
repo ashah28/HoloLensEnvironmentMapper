@@ -17,6 +17,7 @@ public class DataCollectionManager : MonoBehaviour {
 
     bool recording = false;
     string fileName = "data";
+    string fileExt = ".csv";
     string filePath;
     float recStartTime = 0;
 
@@ -29,7 +30,7 @@ public class DataCollectionManager : MonoBehaviour {
 
         InitFileToWrite();
 
-        if (File.Exists(filePath + ".txt"))
+        if (File.Exists(filePath + fileExt))
             DebugManager.Instance.PrintToInfoLog("File created successfully: " + filePath);
         else
             DebugManager.Instance.PrintToInfoLog("Failed to create:" + filePath);
@@ -69,6 +70,7 @@ public class DataCollectionManager : MonoBehaviour {
             CancelInvoke("WritePositionToScreen");
             if (sr != null)
                 sr.Dispose();
+
             DebugManager.Instance.PrintToInfoLog("Rec. duration:" + (Time.time - recStartTime));
         }
     }
@@ -92,14 +94,16 @@ public class DataCollectionManager : MonoBehaviour {
             else
                 filePath = Application.persistentDataPath + "/" + currentFileName;
 
-            if (File.Exists(filePath + ".txt"))
+            if (File.Exists(filePath + fileExt))
             {
                 Debug.Log(filePath + " already exists. Incrementing it.");
                 InitFileToWrite();
             }
             else
             {
-                sr = File.CreateText(filePath + ".txt");
+                sr = File.CreateText(filePath + fileExt);
+                string rowData ="time, x, y, z, u, v, w";
+                sr.WriteLine(rowData);
                 sr.AutoFlush = true;
             }
         }
@@ -111,7 +115,9 @@ public class DataCollectionManager : MonoBehaviour {
 
     void WriteToDisk()
     {
-        string rowData = (Time.time - recStartTime) + " : " + transform.position + " -- " + transform.eulerAngles;
+        string rowData = (Time.time - recStartTime) + ", "
+            + target.position.x + ", " + target.position.y + ", " + target.position.z + ", "
+            + target.eulerAngles.x + ", " + target.eulerAngles.y + ", " + target.eulerAngles.z;
         sr.WriteLine(rowData);
     }
 }
