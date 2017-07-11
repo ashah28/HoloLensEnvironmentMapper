@@ -102,7 +102,7 @@ public class DataCollectionManager : MonoBehaviour {
             else
             {
                 sr = File.CreateText(filePath + fileExt);
-                string rowData ="time, x, y, z, u, v, w";
+                string rowData = "time, x, y, z, Eu, Ev, Ew, Qw, Qx, Qy, Qz";
                 sr.WriteLine(rowData);
                 sr.AutoFlush = true;
             }
@@ -117,7 +117,8 @@ public class DataCollectionManager : MonoBehaviour {
     {
         string rowData = (Time.time - recStartTime) + ", "
             + target.position.x + ", " + target.position.y + ", " + target.position.z + ", "
-            + target.eulerAngles.x + ", " + target.eulerAngles.y + ", " + target.eulerAngles.z;
+            + target.eulerAngles.x + ", " + target.eulerAngles.y + ", " + target.eulerAngles.z + ", "
+            + target.rotation.w + ", " + target.rotation.x + ", " + target.rotation.y + ", " + target.rotation.z;
         sr.WriteLine(rowData);
     }
 }
