@@ -18,19 +18,6 @@ public class VideoCaptureController : MonoBehaviour
             StartVideoCaptureTest();
     }
 
-    void Update()
-    {
-        if (m_VideoCapture == null || !m_VideoCapture.IsRecording)
-        {
-            return;
-        }
-
-        //if (Time.time > m_stopRecordingTimer)
-        //{
-        //    m_VideoCapture.StopRecordingAsync(OnStoppedRecordingVideo);
-        //}
-    }
-
     void StartVideoCaptureTest()
     {
         DebugManager.Instance.PrintToInfoLog("Cam Init");
@@ -84,11 +71,6 @@ public class VideoCaptureController : MonoBehaviour
     void OnStartedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
     {
         DebugManager.Instance.PrintToInfoLog("Started Video Capture Mode!");
-        //string timeStamp = Time.time.ToString().Replace(".", "").Replace(":", "");
-        //string filename = string.Format("TestVideo_{0}.mp4", timeStamp);
-        //string filepath = System.IO.Path.Combine(Application.persistentDataPath, filename);
-        //filepath = filepath.Replace("/", @"\");
-        //m_VideoCapture.StartRecordingAsync(filepath, OnStartedRecordingVideo);
     }
 
     void OnStoppedVideoCaptureMode(VideoCapture.VideoCaptureResult result)
